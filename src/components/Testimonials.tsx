@@ -1,4 +1,4 @@
-import { Quote, Star, Briefcase, TrendingUp, Send } from 'lucide-react';
+import { Quote, Star, Briefcase, TrendingUp, Send, User } from 'lucide-react';
 
 export default function Testimonials() {
   const testimonials = [
@@ -7,7 +7,7 @@ export default function Testimonials() {
       role: 'Ментор по верстке',
       company: 'Асылташ',
       avatar: '/ormon.jpg',
-      text: 'Я попал в академию благодаря Максату: он присутствовал на моих первых занятиях и помогал с разбором задач. Его подход к обучению прост и понятен, и он вдохновляет студентов на новые идеи. ',
+      text: 'Я попал в академию благодаря Максату: он присутствовал на моих первых занятиях и помогал с проведением занятий. Его подход к обучению прост и понятен, и он вдохновляет студентов на новые идеи. ',
       telegram: 'https://t.me/keorilan',
     },
     {
@@ -15,14 +15,14 @@ export default function Testimonials() {
       role: 'Ментор по JS',
       company: '7 микрорайон',
       avatar: '/danil.png',
-      text: 'Максат умеет объяснять сложное просто. Благодаря его методике студенты быстро усваивают материал и получают реальные навыки. Его презентации стали стандартом для команды.',
+      text: 'Максат всегда, когда свободен, может подстраховать и провести занятие, если вы не сможете прийти. Помимо этого, я, как и многие, использую его презентации в работе.',
       telegram: 'https://t.me/Danny_dev_l',
     },
     {
       name: 'Руслан',
       role: 'Ментор по верстке',
       company: '7 микрорайон',
-      avatar: '/joomart.jpg',
+      avatar: '',
       text: 'При поступлении на работу Максат был человеком, который проверял мои навыки. Я сидел на его уроке, и он очень хорошо объяснял материал. Его наставничество помогает студентам достигать целей быстрее и увереннее. Я точно за него буду голосовать!',
       telegram: 'https://t.me/sorryi4got',
     },
@@ -39,7 +39,8 @@ export default function Testimonials() {
             </span>
           </h2>
           <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
-          Реальные отзывы о том, как я помогаю людям учиться, развиваться и достигать целей
+            Реальные отзывы о том, как я помогаю людям учиться, развиваться и
+            достигать целей
           </p>
         </div>
 
@@ -50,10 +51,17 @@ export default function Testimonials() {
               className="bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-8 border border-slate-200 hover:shadow-xl transition-all"
             >
               <div className="flex items-start gap-4 mb-6">
-                <img
-                  src={testimonial.avatar}
-                  className="w-[100px] h-[100px] rounded-full object-cover object-top"
-                ></img>
+                {testimonial.avatar === '' ? (
+                  <div className="w-[100px] h-[100px] flex items-center justify-center rounded-full bg-black/80">
+                    <User className="text-white" size={65} />
+                  </div>
+                ) : (
+                  <img
+                    src={testimonial.avatar}
+                    className="w-[100px] h-[100px] rounded-full object-cover object-top"
+                  />
+                )}
+
                 <div className="flex-1">
                   <h4 className="font-bold text-md text-slate-900">
                     {testimonial.name}
@@ -78,19 +86,17 @@ export default function Testimonials() {
               <p className="text-slate-700 leading-relaxed mb-6">
                 {testimonial.text}
               </p>
-<a
-  className="bg-sky-500 flex py-3 items-center justify-center text-white gap-2 font-bold rounded-2xl hover:bg-sky-600 transition-colors"
-  href={testimonial.telegram}
-  target="_blank"
->
-  <Send />
-  Написать в Telegram
-</a>
-
+              <a
+                className="bg-sky-500 flex py-3 items-center justify-center text-white gap-2 font-bold rounded-2xl hover:bg-sky-600 transition-colors"
+                href={testimonial.telegram}
+                target="_blank"
+              >
+                <Send />
+                Написать в Telegram
+              </a>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );
