@@ -7,10 +7,9 @@ export default function VideoMeme({ videoSrc, text }) {
   });
 
   return (
-    <section className="w-full py-12 bg-gray-100">
+    <section className="w-full py-32 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-8">
 
-        {/* Видео */}
         <div className="w-full lg:w-1/2" ref={ref}>
           {inView && (
             <video

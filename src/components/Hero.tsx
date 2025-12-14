@@ -1,6 +1,6 @@
 import { ArrowRight, Code2, Heart, Rocket } from 'lucide-react';
 import Countdown from './CountDown';
-
+import MaksatImg from "../assets/maksat.jpg";
 interface HeroProps {
   onCTAClick: () => void;
 }
@@ -29,7 +29,7 @@ export default function Hero({ onCTAClick }: HeroProps) {
             <div className="relative md:hidden">
               <div className="relative max-w-[370px] bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 shadow-2xl">
                 <img
-                  src="/maksat.jpg"
+                  src={MaksatImg}
                   className="max-w-[full] rounded-md"
                   alt=""
                 />

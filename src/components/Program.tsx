@@ -16,6 +16,13 @@ import { Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import GradImg from "../assets/grad.jpg"
+import HackathonImg from "../assets/hackathon.jpg"
+import DiagImg from "../assets/diag.jpg"
+import OloloImg from "../assets/ololo.jpg"
+import TrialImg from "../assets/trial.jpg"
+import TeamImg from "../assets/team.jpg"
+
 
 export default function Program() {
   const months = [
@@ -29,7 +36,7 @@ export default function Program() {
       ],
       icon: Layout,
       color: 'from-blue-500 to-cyan-500',
-      photo: '/grad.jpg',
+      photo: GradImg,
     },
     {
       number: 5,
@@ -40,7 +47,7 @@ export default function Program() {
       ],
       icon: Rocket,
       color: 'from-emerald-500 to-teal-500',
-      photo: '/hackathon.jpg',
+      photo: HackathonImg,
     },
     {
       number: 2,
@@ -51,7 +58,7 @@ export default function Program() {
       ],
       icon: Code,
       color: 'from-cyan-500 to-teal-500',
-      photo: '/diag.jpg',
+      photo: DiagImg,
     },
     {
       number: 4,
@@ -62,7 +69,7 @@ export default function Program() {
       ],
       icon: Atom,
       color: 'from-sky-500 to-sky-800',
-      photo: '/ololo.jpg',
+      photo: OloloImg,
     },
     {
       number: 3,
@@ -72,7 +79,7 @@ export default function Program() {
       ],
       icon: Lightbulb,
       color: 'from-teal-500 to-green-500',
-      photo: '/trial.jpg',
+      photo: TrialImg,
     },
 
     {
@@ -84,7 +91,7 @@ export default function Program() {
       ],
       icon: Rocket,
       color: 'from-emerald-500 to-teal-500',
-      photo: '/team.jpg',
+      photo: TeamImg,
     },
   ];
 

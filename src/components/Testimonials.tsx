@@ -1,12 +1,13 @@
 import { Quote, Star, Briefcase, TrendingUp, Send, User } from 'lucide-react';
-
+import DanilImg from "../assets/danil.png"
+import OrmonImg from "../assets/ormon.jpg"
 export default function Testimonials() {
   const testimonials = [
     {
       name: 'Ормон Мамбеткулов',
       role: 'Ментор по верстке',
       company: 'Асылташ',
-      avatar: '/ormon.jpg',
+      avatar: OrmonImg,
       text: 'Я попал в академию благодаря Максату: он присутствовал на моих первых занятиях и помогал с проведением занятий. Его подход к обучению прост и понятен, и он вдохновляет студентов на новые идеи. ',
       telegram: 'https://t.me/keorilan',
     },
@@ -14,7 +15,7 @@ export default function Testimonials() {
       name: 'Данил Петров',
       role: 'Ментор по JS',
       company: '7 микрорайон',
-      avatar: '/danil.png',
+      avatar: DanilImg,
       text: 'Максат всегда, когда свободен, может подстраховать и провести занятие, если вы не сможете прийти. Помимо этого, я, как и многие, использую его презентации в работе.',
       telegram: 'https://t.me/Danny_dev_l',
     },

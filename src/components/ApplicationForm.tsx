@@ -18,7 +18,7 @@ export default function ApplicationForm({ isOpen, onClose }: SupportFormProps) {
 
   const handleSupportClick = () => {
     setVideoOpened('support');
-    setFinalChoice('support'); // фиксируем выбор навсегда
+    setFinalChoice('support');
   };
 
   const handleOtherClick = () => {
