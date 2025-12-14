@@ -39,7 +39,7 @@ function App() {
       <Benefits />
       <VideoMeme
         videoSrc={SuccessVideo}
-        text="Вот так мы радуемся, когда вы делаете правильный выбор"
+        text="Вот так мы радуемся, когда вы сделаете правильный выбор"
       />
       <Testimonials />
       <VideoMeme

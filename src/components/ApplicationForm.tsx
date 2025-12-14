@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { X, Play } from 'lucide-react';
-import HabibVideo from "../assets/habib.mp4"
-import SuccessVideo from "../assets/success.mp4";
+import HabibVideo from '../assets/habib.mp4';
+import SuccessVideo from '../assets/success.mp4';
 
 interface SupportFormProps {
   isOpen: boolean;
@@ -9,7 +9,9 @@ interface SupportFormProps {
 }
 
 export default function ApplicationForm({ isOpen, onClose }: SupportFormProps) {
-  const [videoOpened, setVideoOpened] = useState<'support' | 'other' | null>(null);
+  const [videoOpened, setVideoOpened] = useState<'support' | 'other' | null>(
+    null
+  );
   const [finalChoice, setFinalChoice] = useState<'support' | null>(null);
 
   if (!isOpen) return null;
@@ -46,20 +48,17 @@ export default function ApplicationForm({ isOpen, onClose }: SupportFormProps) {
               <div className="aspect-video w-full mb-6 rounded-xl overflow-hidden bg-black">
                 <img
                   src={
-                    videoOpened === 'support'
-                      ? '/success.gif'
-                      : '/habib.gif'
+                    videoOpened === 'support' ? '/success.gif' : '/habib.gif'
                   }
                   className="w-full h-full"
                 />
-                 <video
-                  src={
-                    videoOpened === 'support'
-                      ? SuccessVideo
-                      : HabibVideo
-                  }
+                <video
+                  src={videoOpened === 'support' ? SuccessVideo : HabibVideo}
                   controls
                   autoPlay
+                  loop
+                  muted
+                  playsInline
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -75,7 +74,8 @@ export default function ApplicationForm({ isOpen, onClose }: SupportFormProps) {
 
               {videoOpened === 'support' && (
                 <p className="text-slate-700 text-lg flex items-center justify-center font-medium">
-                 Спасибо за ваш выбор! <img src="/love.gif" className='w-7 h-7' alt="" />
+                  Спасибо за ваш выбор!{' '}
+                  <img src="/love.gif" className="w-7 h-7" alt="" />
                 </p>
               )}
             </div>
@@ -85,7 +85,6 @@ export default function ApplicationForm({ isOpen, onClose }: SupportFormProps) {
                 onClick={handleSupportClick}
                 className="flex-1 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-6 py-4 rounded-xl font-bold transition-all flex items-center justify-center gap-2"
               >
-              
                 Обязательно тебя поддержу
               </button>
 
@@ -93,7 +92,6 @@ export default function ApplicationForm({ isOpen, onClose }: SupportFormProps) {
                 onClick={handleOtherClick}
                 className="flex-1 bg-gradient-to-r from-gray-400 to-gray-500 hover:from-gray-500 hover:to-gray-600 text-white px-6 py-4 rounded-xl font-bold transition-all flex items-center justify-center gap-2"
               >
-               
                 У меня, к сожалению, другой кандидат
               </button>
             </div>
