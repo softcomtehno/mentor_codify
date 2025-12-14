@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.slider .swiper-pagination-bullet {
+  width: 50px;
+  height: 6px;
+  display: inline-block;
+  background: #0ea5e9;
+  margin: 0 5px;
+  border-radius: 20px;
+  transition:
+    opacity 0.5s,
+    background-color 0.5s,
+    width 0.5s;
+}
+
+.slider .swiper-pagination-bullet {
+  width: 7px;
+  height: 7px;
+  display: inline-block;
+  background: #0ea5e9;
+  margin: 0 5px;
+  border-radius: 20px;
+  transition:
+    opacity 0.5s,
+    background-color 0.5s,
+    width 0.5s;
+}
+.slider .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 30px !important;
+}

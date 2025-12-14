@@ -16,7 +16,7 @@ export default function Hero({ onCTAClick }: HeroProps) {
             <Countdown />
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Максат Каныбеков - {''} 
+              Максат Каныбеков - {''}
               <span className="text-transpare bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
                 ментор года
               </span>
@@ -26,19 +26,34 @@ export default function Hero({ onCTAClick }: HeroProps) {
               Мой вклад в развитие студентов Codify, проектного обучения и
               уверенности подростков через реальные IT-проекты.
             </p>
+            <div className="relative md:hidden">
+              <div className="relative max-w-[370px] bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 shadow-2xl">
+                <img
+                  src="/maksat.jpg"
+                  className="max-w-[full] rounded-md"
+                  alt=""
+                />
+                <div className="absolute -top-4 -right-4 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-lg transform rotate-3 r-md:-right-2">
+                  <div className="text-sm font-medium">ментор квартала</div>
+                </div>
+              </div>
 
+              <div className="absolute -bottom-4 -left-4 bg-gradient-to-br from-blue-500 to-cyan-500 text-white px-6 py-3 rounded-lg shadow-xl transform -rotate-3 r-md:-left-2">
+                <div className="font-bold text-lg flex items-center">
+                  голосуй <img className="w-7 h-7" src="/love.gif" alt="" />
+                </div>
+              </div>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={onCTAClick}
                 className="group bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 flex items-center justify-center gap-2 shadow-xl shadow-blue-500/25 r-md:flex-col"
               >
-                Поддержать в голосовании
-                <Heart className="w-5 h-5 group-hover:translate-x-1 transition-transform r-md:rotate-90" />
+                Выбрать кандидата
               </button>
             </div>
           </div>
-
-          <div className="relative">
+          <div className="hidden md:block relative">
             <div className="relative max-w-[370px] bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 shadow-2xl">
               <img
                 src="/maksat.jpg"
@@ -52,8 +67,9 @@ export default function Hero({ onCTAClick }: HeroProps) {
             </div>
 
             <div className="absolute -bottom-4 -left-4 bg-gradient-to-br from-blue-500 to-cyan-500 text-white px-6 py-3 rounded-lg shadow-xl transform -rotate-3 r-md:-left-2">
-
-              <div className="font-bold text-lg">голосуй 💙</div>
+              <div className="font-bold text-lg flex items-center">
+                голосуй <img className="w-7 h-7" src="/love.gif" alt="" />
+              </div>
             </div>
           </div>
         </div>

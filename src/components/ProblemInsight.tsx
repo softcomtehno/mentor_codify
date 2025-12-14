@@ -1,4 +1,10 @@
-import { AlertTriangle, TrendingDown, Brain, Zap } from 'lucide-react';
+import {
+  AlertTriangle,
+  TrendingDown,
+  Brain,
+  Zap,
+  TrendingUp,
+} from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -11,46 +17,41 @@ import { Navigation, Pagination } from 'swiper/modules';
 export default function ProblemInsight() {
   const stats = [
     {
-      icon: TrendingDown,
-      stat: '47%',
-      label: 'профессий исчезнут к 2030',
+      icon: TrendingUp,
+      stat: '+18 групп',
+      label: 'выпустил  с реальными проектами (5-10 проектов в каждой)',
       color: 'from-red-500 to-orange-500',
     },
     {
       icon: Zap,
-      stat: '85%',
-      label: 'компаний нанимают удаленно',
+      stat: '+270 студентов',
+      label: 'которые стали увереннее работать с технологиями и компьютером',
       color: 'from-blue-500 to-cyan-500',
     },
     {
       icon: Brain,
-      stat: 'Сможете',
-      label: 'создать собственный стартап',
+      stat: 'Уже 2 года',
+      label: 'обучаю через проекты, командную работу и практику',
       color: 'from-purple-500 to-pink-500',
     },
   ];
 
   return (
-    <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 md:py-32">
+    <section className=" py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-            <AlertTriangle className="w-4 h-4" />
-            Подход ментора
-          </div>
-
           <h2 className="text-2xl md:text-3xl lg:text-3xl font-bold text-slate-900 mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">
               Ментор {''}
             </span>
-            <br /> — <br /> это не про уроки, а про развитие человека
+            <br /> это не про уроки, а про развитие человека
           </h2>
 
           <p className="text-lg md:text-lg text-default-500 max-w-3xl mx-auto leading-relaxed">
-            За годы работы в Codify я убедился: навыки быстро устаревают, а
-            мышление, уверенность и умение доводить проекты до результата —
-            остаются. Поэтому в своей работе я делаю упор не только на
-            технологии, но и на развитие самостоятельности студентов.
+            Я работаю в Codify с 2023 года. За это время академия сильно
+            изменилась и выросла вместе с ней рос и я: набирался опыта, улучшал
+            подход к обучению и вместе с командой влиял на развитие студентов и
+            самой экосистемы Codify.
           </p>
         </div>
 
@@ -75,45 +76,27 @@ export default function ProblemInsight() {
           ))}
         </div>
 
-        <div className="bg-gradient-to-br from-slate-900 to-blue-900 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500 rounded-full blur-3xl opacity-20"></div>
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-cyan-500 rounded-full blur-3xl opacity-20"></div>
-
+        <div className="relative overflow-hidden">
           <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl md:text-3xl font-bold mb-4 flex gap-2 items-center">
-                Мои презентации{' '}
-                <div className="w-6 h-6 rounded-full bg-gradient-to-r from-blue-400 to-cyan-400 flex items-center justify-center flex-shrink-0">
-                  <svg
-                    className="w-4 h-4 text-slate-900"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={3}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                </div>
+                Мои презентации
               </h3>
-              <p className="text-slate-300 text-lg leading-relaxed mb-6">
-                Многие из моих презентаций со временем стали внутренним
-                стандартом для менторов Codify. Я делал их простыми, наглядными
-                и легко воспринимаемыми — так, чтобы сложные вещи можно было
-                объяснить понятно детям, подросткам и родителям.
+              <p className=" text-lg leading-relaxed mb-6">
+                Многие из моих коллег используют мои презентаций, чему я ооочень
+                рад. Я делал их простыми, наглядными и легко воспринимаемыми
+                так, чтобы сложные вещи можно было объяснить понятно детям,
+                подросткам и родителям.
               </p>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-6">
+            <div className="  rounded-2xl">
               <Swiper
                 pagination={true}
                 navigation={true}
                 effect="card"
                 modules={[Pagination, Navigation]}
-                className="px-5 pb-3"
+                className="px-5  slider"
               >
                 <SwiperSlide>
                   {' '}
@@ -156,7 +139,6 @@ export default function ProblemInsight() {
                       Для занятий на тему "Инженерное мышление"
                     </p>
                   </div>
-                 
                 </SwiperSlide>
                 <SwiperSlide>
                   {' '}
@@ -185,9 +167,47 @@ export default function ProblemInsight() {
                       Для занятий на тему "Основы Операционной системы"
                     </p>
                   </div>
-         
                 </SwiperSlide>
               </Swiper>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative mt-10 overflow-hidden">
+          <div className=" grid  grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-2  ">
+            <h3 className="text-2xl md:text-3xl font-bold ">
+              Моя программа обучения
+            </h3>
+            <p className="text-lg md:row-start-2 md:col-span-3 leading-relaxed ">
+              До внедрения единой программы обучения, моя программа по верстке
+              долгое время служила внутренним стандартом для менторов Codify.
+              Сейчас она уже устарела, но в свое время была очень востребована
+              среди менторов.
+            </p>
+            <div className=" md:col-span-2 border rounded-lg p-4 hover:shadow-lg transition-shadow max-h-[120px] md:max-h-full flex items-center gap-4 overflow-hidden">
+              <a
+                href="https://kanybekovmaksat.notion.site/ebd//087f7b2300054156844ef581a7d43f26"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-1 items-center gap-4"
+              >
+                <img
+                  src="https://www.notion.so/images/favicon.ico"
+                  alt="Notion logo"
+                  className="w-10 h-10 rounded flex-shrink-0"
+                />
+                <div className="flex-1 min-w-0">
+                  <p className="font-bold text-blue-600 text-sm md:text-base">
+                    Simple Frame
+                  </p>
+                  <p className="text-xs md:text-sm text-slate-600">
+                    © Программа обучения для изучения технологий HTML, CSS.
+                  </p>
+                  <p className="text-xs text-slate-400 truncate">
+                    kanybekovmaksat.notion.site/ebd/087f7b2300054156844ef581a7d43f26
+                  </p>
+                </div>
+              </a>
             </div>
           </div>
         </div>

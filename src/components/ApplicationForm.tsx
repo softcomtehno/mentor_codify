@@ -74,8 +74,8 @@ export default function ApplicationForm({ isOpen, onClose }: SupportFormProps) {
               )}
 
               {videoOpened === 'support' && (
-                <p className="text-slate-700 text-lg font-medium">
-                 Спасибо за ваш выбор!💙
+                <p className="text-slate-700 text-lg flex items-center justify-center font-medium">
+                 Спасибо за ваш выбор! <img src="/love.gif" className='w-7 h-7' alt="" />
                 </p>
               )}
             </div>

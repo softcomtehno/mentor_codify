@@ -10,6 +10,12 @@ import {
   Atom,
   ServerCrash,
 } from 'lucide-react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 export default function Program() {
   const months = [
@@ -40,7 +46,7 @@ export default function Program() {
       number: 2,
       title: 'Работал на ДИАГНОСТИКАХ (Лето)',
       topics: [
-        '~300 детей и подростков прошли диагностику навыков',
+        '~300 детей и подростков прошли диагностику',
         '~170 студентов после диагностики поступили на курсы Codify',
       ],
       icon: Code,
@@ -51,7 +57,7 @@ export default function Program() {
       number: 4,
       title: 'Event в Ololo (Июль)',
       topics: [
-        'Представил Карту IT-профессий для родителей',
+        'Представил Карту IT-профессий и нашу методику PBL для родителей.',
         'С ребятами создали свои первые сайты прямо на телефоне',
       ],
       icon: Atom,
@@ -82,37 +88,12 @@ export default function Program() {
     },
   ];
 
-  const projects = [
-    {
-      title: 'Лендинг образовательного центра',
-      description:
-        'Одностраничный сайт с адаптивной версткой, современным дизайном и формой обратной связи',
-      tech: ['HTML', 'CSS'],
-    },
-    {
-      title: 'Интернет-магазин ресторана',
-      description:
-        'Онлайн-платформа для выбора блюд с меню и добавления блюда в меню',
-      tech: ['HTML', 'CSS', 'JavaScript'],
-    },
-    {
-      title: 'Киносайт',
-      description:
-        'Приложение с каталогом фильмов, поиском и рейтингами на основе данных из публичного API',
-      tech: ['HTML', 'CSS', 'JavaScript', 'React'],
-    },
-    {
-      title: 'Стартап MVP',
-      description:
-        'Твой собственный fullstack-проект — от идеи до реализации и презентации продукта',
-      tech: ['HTML', 'CSS', 'JavaScript', 'React', 'MongoDB'],
-    },
-  ];
+
 
   return (
-    <section className="bg-gradient-to-br from-slate-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+    <section>
+      <div className="max-w-7xl mt-10 mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-5">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">
               2025
@@ -122,43 +103,60 @@ export default function Program() {
           <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
             Мой результат работы за этот год:
           </p>
-<small>P.S.:Некоторые картинки устарели, но содержание остаётся актуальным.</small>
+          <small>
+            P.S.:Некоторые картинки устарели, но содержание остаётся актуальным.
+          </small>
         </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+        <Swiper
+          modules={[Pagination, Navigation]}
+          spaceBetween={24}
+          slidesPerView={1}
+          pagination={{ clickable: true }}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          className="pb-10 slider"
+        >
           {months.map((month, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all border border-slate-200 group hover:-translate-y-1"
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <div
-                  className={`w-10 h-10 rounded-lg bg-gradient-to-br ${month.color} flex items-center justify-center group-hover:scale-110 transition-transform`}
-                >
-                  <month.icon className="w-5 h-5 text-white" />
-                </div>
-                <h3 className="text-lg font-bold text-slate-900 mb-4">
-                  {month.title}
-                </h3>
-              </div>
-
-              <ul className="space-y-2">
-                {month.topics.map((topic, topicIndex) => (
-                  <li
-                    key={topicIndex}
-                    className="flex items-start gap-2 text-sm text-slate-600"
+            <SwiperSlide key={index}>
+              <div className="bg-white rounded-2xl p-6  transition-all border border-slate-200 group  flex flex-col h-full">
+                <div className="flex items-center gap-3 min-h-[65px]">
+                  <div
+                    className={`w-10 h-10 rounded-lg bg-gradient-to-br ${month.color} flex items-center justify-center group-hover:scale-110 transition-transform`}
                   >
-                    <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span>{topic}</span>
-                  </li>
-                ))}
-              </ul>
-              <img className="rounded-xl mt-2 w-full h-[200px] object-cover " src={month.photo} alt="" />
-            </div>
-          ))}
-        </div>
+                    <month.icon className="w-5 h-5 text-white" />
+                  </div>
 
-        <div className="bg-gradient-to-br from-slate-900 to-blue-900 rounded-3xl p-8 md:p-12 text-white">
+                  <h3 className="text-lg font-bold text-slate-900">
+                    {month.title}
+                  </h3>
+                </div>
+
+                <ul className="space-y-2 mt-3 min-h-[150px] max-h-[150px]">
+                  {month.topics.map((topic, topicIndex) => (
+                    <li
+                      key={topicIndex}
+                      className="flex items-start gap-2 text-sm text-slate-500 font-medium"
+                    >
+                      <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                      <span>{topic}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <img
+                  className="rounded-xl  w-full min-h-[200px] max-h-[200px] object-cover"
+                  src={month.photo}
+                  alt=""
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        {/* <div className="bg-gradient-to-br from-slate-900 to-blue-900 rounded-3xl p-8 md:p-12 text-white">
           <div className="text-center mb-12">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
               Примеры проектов моих студентов
@@ -194,7 +192,7 @@ export default function Program() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
