@@ -48,7 +48,6 @@ export default function ApplicationForm({ isOpen, onClose }: SupportFormProps) {
               <div className="aspect-video w-full mb-6 rounded-xl overflow-hidden bg-black">
                 <video
                   src={videoOpened === 'support' ? SuccessVideo : HabibVideo}
-                  controls
                   autoPlay
                   loop
                   playsInline
