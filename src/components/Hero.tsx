@@ -33,6 +33,7 @@ export default function Hero({ onCTAClick }: HeroProps) {
                   className="max-w-[full] rounded-md"
                   alt=""
                 />
+
                 <div className="absolute -top-4 -right-4 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-lg transform rotate-3 r-md:-right-2">
                   <div className="text-sm font-medium">ментор квартала</div>
                 </div>
