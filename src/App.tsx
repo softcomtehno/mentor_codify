@@ -39,14 +39,15 @@ function App() {
       <Benefits />
       <VideoMeme
         videoSrc={SuccessVideo}
-        text="Вот так мы радуемся, когда вы сделаете правильный выбор"
+        text="Вот так мы порадуемся, когда вы сделаете правильный выбор"
       />
       <Testimonials />
       <VideoMeme
         videoSrc={PlakiVideo}
-        text="Я ночью, если проиграю в голосовании "
+        text="Я ночью, если проиграю в голосовании"
       />
-      <Footer />
+      <Footer onCTAClick={handleCTAClick} />
+
       <VideoMeme
         videoSrc={AAVideo}
         text="Ваши эмоции, когда мой сайт убедил вас выбрать меня"

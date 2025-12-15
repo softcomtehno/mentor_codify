@@ -20,7 +20,7 @@ export default function Testimonials() {
       telegram: 'https://t.me/Danny_dev_l',
     },
     {
-      name: 'Руслан',
+      name: 'Руслан Саматов',
       role: 'Ментор по верстке',
       company: '7 микрорайон',
       avatar: '',
@@ -40,8 +40,7 @@ export default function Testimonials() {
             </span>
           </h2>
           <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
-            Реальные отзывы о том, как я помогаю людям учиться, развиваться и
-            достигать целей
+            Реальные отзывы моих коллег )
           </p>
         </div>
 

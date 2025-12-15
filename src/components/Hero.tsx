@@ -48,9 +48,9 @@ export default function Hero({ onCTAClick }: HeroProps) {
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={onCTAClick}
-                className="group bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 flex items-center justify-center gap-2 shadow-xl shadow-blue-500/25 r-md:flex-col"
+                className="group bg-gradient-to-r animate-bounce from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white mt-3 px-4 md:px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 flex items-center justify-center gap-2 shadow-xl shadow-blue-500/25 r-md:flex-col"
               >
-                Выбрать кандидата
+                Нажмите чтобы выбрать кандидата
               </button>
             </div>
           </div>
