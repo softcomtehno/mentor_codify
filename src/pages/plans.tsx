@@ -9,7 +9,7 @@ const PlansPage = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <h1 className="text-2xl md:text-3xl  font-bold leading-tight">
-              Полностью обновлю программу обучения по верстке
+              Полностью обновлю <a className="underline text-blue-500" href="https://www.notion.so/kanybekovmaksat/Simple-Frame-087f7b2300054156844ef581a7d43f26" target="_blank" rel="noopener noreferrer">эту программу обучения</a>  по верстке
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed">
               Сделаю её более практичной, современной и ориентированной на
